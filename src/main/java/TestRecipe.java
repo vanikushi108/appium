@@ -20,15 +20,15 @@ public class TestRecipe {
     @BeforeMethod
     public void setUp() throws Exception {
         // set up appium
-        File appDir = new File("/Users/KushiHarsh/workspace");
+        File appDir = new File("/Users/vanithakasala/Appium");
         File app = new File(appDir, "Albert.app");
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
-        capabilities.setCapability(CapabilityType.VERSION, "9.3");
+//        capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
+        capabilities.setCapability(CapabilityType.VERSION, "8.3");
         capabilities.setCapability(CapabilityType.PLATFORM, "Mac");
         capabilities.setCapability("platformName", "iOS");
         capabilities.setCapability("deviceName", "iPhone 5");
-        capabilities.setCapability("platformVersion", "9.3");
+        capabilities.setCapability("platformVersion", "8.3");
         capabilities.setCapability("app", app.getAbsolutePath());
         driver = new RemoteWebDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
     }
